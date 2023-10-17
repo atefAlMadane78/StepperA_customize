@@ -55,7 +55,8 @@ mixin StepStyle on IStepPage {
                       SizedBox(
                         height: StepperModel().stepHeight,
                         width: StepperModel().stepWidth,
-                        child: buildCustomInnerElementOfStepper(index),
+                        child: StepperModel().customSteps![index].customChild ??
+                             buildCustomInnerElementOfStepper(index),
                       )
                     ]),
                     if (index != StepperModel().notifier.getTotalSteps - 1)
@@ -72,6 +73,7 @@ mixin StepStyle on IStepPage {
                       StepperModel().customSteps![index].title ?? "",
                       softWrap: true,
                       maxLines: 1,
+                      textAlign: StepperModel().customSteps![index].textAlign,
                       style: TextStyle(
                           fontSize:
                               index == StepperModel().notifier.currentIndex

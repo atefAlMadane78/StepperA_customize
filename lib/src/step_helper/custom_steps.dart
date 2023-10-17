@@ -9,10 +9,12 @@ class CustomSteps {
   final IconData? stepsIcon;
   final Image? image;
   final String? title;
+  final TextAlign? textAlign;
+  final Widget? customChild;
 
-  const CustomSteps({
+  const CustomSteps( {
     this.stepsIcon,
-    this.image,
+    this.image, required this.textAlign, this.customChild,
     this.title,
   });
 }
