@@ -67,7 +67,7 @@ mixin StepStyle on IStepPage {
                 if (StepperModel().customSteps![index].title != null)
                   Container(
                     padding: const EdgeInsets.only(top: 3),
-                    // alignment: Alignment.centerLeft,
+                    alignment: Alignment.center,
                     width: StepperModel().stepWidth + 10,
                     child: Text(
                       StepperModel().customSteps![index].title ?? "",
