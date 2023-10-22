@@ -10,7 +10,9 @@ import 'package:stepper_a/src/utils/stepper_model.dart';
 ///
 class StepperAController {
   int getIndex() {
-    return StepperModel().notifier.currentIndex;
+    return StepperModel().checkIsStepperExist()
+        ? StepperModel().notifier.currentIndex
+        : 0;
   }
 
   void next({required Function(int currentIndex) onTap}) {

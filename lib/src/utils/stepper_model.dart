@@ -313,6 +313,10 @@ class StepperModel {
     return _instance!;
   }
 
+  bool checkIsStepperExist(){
+    return _instance != null ;
+  }
+
   factory StepperModel() {
     return _instance!;
   }
