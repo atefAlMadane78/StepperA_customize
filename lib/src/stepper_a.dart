@@ -49,6 +49,8 @@ class StepperA extends StatefulWidget {
   ///default step width is 50.
   final double stepWidth;
 
+  final double fontSize;
+
   ///this field stepper step height.
   ///default step height is 50.
   final double stepHeight;
@@ -145,6 +147,7 @@ class StepperA extends StatefulWidget {
       required this.stepBorder,
       this.customSteps,
       required this.step,
+      required this.fontSize,
       this.pageSwipe = true})
       : _floatingButton =
             (floatingForwardButton != null && floatingPreviousButton != null),
@@ -231,6 +234,7 @@ class _StepperAStateModel extends _StepperAState
     _notifier.loadingPage = false;
     StepperModel.init(
         lineThickness: widget.lineThickness,
+        fontSize: widget.fontSize,
         stepperSize: widget.stepperSize,
         stepperBodyWidget: widget.stepperBodyWidget,
         stepperBackgroundColor: widget.stepperBackgroundColor,
@@ -270,6 +274,7 @@ class _StepperAStateModel extends _StepperAState
         lineThickness: widget.lineThickness,
         stepperSize: widget.stepperSize,
         stepperBodyWidget: widget.stepperBodyWidget,
+        fontSize: widget.fontSize,
         stepperBackgroundColor: widget.stepperBackgroundColor,
         padding: widget.padding,
         margin: widget.margin,

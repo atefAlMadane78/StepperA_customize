@@ -75,10 +75,10 @@ mixin StepStyle on IStepPage {
                       // maxLines: 1,
                       textAlign: StepperModel().customSteps![index].textAlign,
                       style: TextStyle(
-                          fontSize:
-                              index == StepperModel().notifier.currentIndex
-                                  ?  StepperModel().stepWidth/14
-                                  : StepperModel().stepWidth/12,
+                          fontSize: StepperModel().fontSize,
+                              // index == StepperModel().notifier.currentIndex
+                              //     ?  StepperModel().fontSize,
+                              //     : StepperModel().fontSize + 2,
                           color: index == StepperModel().notifier.currentIndex
                               ? getBorderColor(index)
                               : StepperModel().step.inactiveStepColor),

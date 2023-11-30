@@ -46,6 +46,8 @@ class StepperModel {
   ///default step width is 50.
   double stepWidth;
 
+  double fontSize;
+
   ///this field stepper step height.
   ///default step height is 50.
   double stepHeight;
@@ -143,6 +145,7 @@ class StepperModel {
       required this.dashPattern,
       required this.stepHeight,
       required this.stepWidth,
+      required this.fontSize,
       required this.stepperAxis,
       required this.pageSwipe,
       // this.formKey,
@@ -216,6 +219,7 @@ class StepperModel {
       ///this field stepper step width.
       ///default step width is 50.
       required double stepWidth,
+      required double fontSize,
 
       ///If you need stepper Axis wise build
       required Axis stepperAxis,
@@ -308,13 +312,13 @@ class StepperModel {
       totalSteps: totalSteps,
       notifier: notifier,
       pageSwipe: pageSwipe,
-      formValidation: formValidation,
+      formValidation: formValidation, fontSize: fontSize,
     );
     return _instance!;
   }
 
-  bool checkIsStepperExist(){
-    return _instance != null ;
+  bool checkIsStepperExist() {
+    return _instance != null;
   }
 
   factory StepperModel() {
