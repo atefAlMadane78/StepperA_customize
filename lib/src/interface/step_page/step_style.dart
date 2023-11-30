@@ -72,13 +72,13 @@ mixin StepStyle on IStepPage {
                     child: Text(
                       StepperModel().customSteps![index].title ?? "",
                       softWrap: true,
-                      maxLines: 1,
+                      // maxLines: 1,
                       textAlign: StepperModel().customSteps![index].textAlign,
                       style: TextStyle(
                           fontSize:
                               index == StepperModel().notifier.currentIndex
-                                  ? 14
-                                  : 12,
+                                  ?  StepperModel().stepWidth/14
+                                  : StepperModel().stepWidth/12,
                           color: index == StepperModel().notifier.currentIndex
                               ? getBorderColor(index)
                               : StepperModel().step.inactiveStepColor),
