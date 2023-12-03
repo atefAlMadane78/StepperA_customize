@@ -29,6 +29,7 @@ class StepperStep extends AStepperStep
       width: stepperSizeCalculate().width,
       child: SingleChildScrollView(
         scrollDirection: StepperModel().stepperAxis,
+        physics: const NeverScrollableScrollPhysics(),
         controller: StepperModel().notifier.getStepScrollController(
             itemWidth: StepperModel().stepWidth,
             lineWidth: CalculateLength(
